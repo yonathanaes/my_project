@@ -3,7 +3,7 @@ import streamlit as st
 import matplotlib.pyplot as plt
 import plotly.express as px
 
-import helper
+import my_project.data_wrangling as data_wrangling
 
 def main():
 
@@ -19,7 +19,7 @@ def main():
 
 if __name__ == '__main__':
     print(__name__)
-    print(helper.suma(1, 2))
+    print(data_wrangling.suma(1, 2))
     
 
 
