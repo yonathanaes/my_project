@@ -3,12 +3,25 @@ import streamlit as st
 import matplotlib.pyplot as plt
 import plotly.express as px
 
-datos = pd.read_csv('./sbux.csv')
+import helper
 
-#print(datos.info())
+def main():
 
-fig = px.histogram(datos,'Close')
-fig.show()
+    datos = pd.read_csv('./sbux.csv')
+    #print(datos.info())
 
-st.plotly_chart(fig)
+    boton_histograma = st.button('Clik aqui para generar el histograma')
+
+    if boton_histograma:
+        fig = px.histogram(datos,'Close')
+        fig.show()
+        st.plotly_chart(fig)
+
+if __name__ == '__main__':
+    print(__name__)
+    print(helper.suma(1, 2))
+    
+
+
+
 
